@@ -2,7 +2,7 @@
     "name": "ponup/sql-builders",
     "description": "Library to ease the dynamic construction of SQL statements in PHP",
     "type": "library",
-    "license": "LGPL",
+    "license": "LGPL-3.0-or-later",
     "authors": [
         {
             "name": "Santiago Lizardo",
