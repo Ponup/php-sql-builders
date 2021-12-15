@@ -4,6 +4,7 @@ namespace Ponup\SqlBuilders;
 
 class SelectQueryBuilder implements QueryBuilder
 {
+    private ?string $groupBy = null;
     private ?string $orderBy = null;
     private string|int|null $limit = null;
 
@@ -35,6 +36,11 @@ class SelectQueryBuilder implements QueryBuilder
         $this->joins[] = $join;
     }
 
+	public function setGroupBy(string $groupBy): void
+	{
+		$this->groupBy = $groupBy;
+	}
+
     public function setOrderBy(string $orderBy): void
     {
         $this->orderBy = $orderBy;
@@ -53,6 +59,9 @@ class SelectQueryBuilder implements QueryBuilder
         }
         if (count($this->where)) {
             $sql .= ' WHERE ' . implode(' ', $this->where);
+        }
+        if ($this->groupBy) {
+            $sql .= ' GROUP BY ' . $this->groupBy;
         }
         if ($this->orderBy) {
             $sql .= ' ORDER BY ' . $this->orderBy;

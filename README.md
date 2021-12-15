@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/Ponup/php-sql-builders/branch/master/graph/badge.svg?token=JUXR5NY0UJ)](https://codecov.io/gh/Ponup/php-sql-builders)
+
 # PHP SQL builders
 
 Simple PHP library to dynamically construct SQL statements.
